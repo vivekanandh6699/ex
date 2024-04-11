@@ -1,42 +1,225 @@
-#root {
-  max-width: 1280px;
+.signup-container {
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.signup-heading {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.signup-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.signup-paragraph {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+.login-container {
+  max-width: 400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* HomePage.css */
+
+.container {
+  margin-top: 4rem;
+}
+
+.heading {
+  color: blue;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.addButton {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formContainer {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.inputLabel {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.card {
-  padding: 2em;
+.inputField {
+  margin-bottom: 10px;
+  padding: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+.saveButton {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.cancelButton {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.tableContainer {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tableHeading {
+  background-color: lightgray;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-container {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.form-container h2 {
+  margin-top: 0;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-container input {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.table-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.table-container th {
+  background-color: #f0f0f0;
+}
+
+.table-container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.table-container button:hover {
+  background-color: #0056b3;
 }

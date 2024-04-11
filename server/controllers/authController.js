@@ -186,5 +186,40 @@ updateUser: async (req, res) => {
                 status: 'failure'
             });
         }
-    }
-}
+    },
+
+
+
+    createUser: async (req, res) => {
+    
+        try {
+          // Check if user already exists
+          const { name, email, password } = req.body;
+
+          const existingUser = await User.findOne({ email });
+          if (existingUser) {
+            return res.status(400).json({ message: 'User already exists' });
+          }
+    
+          // Hash the password
+          const hashedPassword = await bcrypt.hash(password, 10);
+    
+          // Create a new user
+          const newUser = new User({
+            name,
+            email,
+            password: hashedPassword
+          });
+    
+          // Save the new user to the database
+          await newUser.save();
+    
+          res.status(201).json({ message: 'User created successfully', user: newUser });
+        } catch (error) {
+          console.error('Error creating user:', error);
+          res.status(500).json({ message: 'Failed to create user' });
+        }
+      }
+    
+    
+};

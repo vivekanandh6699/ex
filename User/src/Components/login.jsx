@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 function Login() {
@@ -25,27 +25,26 @@ function Login() {
             // Handle error, maybe show error message to the user
         }
     };
-    const handlelogin =() =>{
+    const handleLogin =() =>{
         setlogedIn (true)
         navigate ('/home')
     }  
-  return (
-    <div>
-            <h2>login  Form</h2>
-            <form onSubmit={handleSubmit}>
-              
-                <div>
+    return (
+        <div className="login-container">
+            <h2>Login Form</h2>
+            <form onSubmit={handleSubmit} className="login-form">
+                <div className="form-group">
                     <label>Email:</label>
                     <input type="email" name="email" value={formData.email} onChange={handleChange} />
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Password:</label>
                     <input type="password" name="password" value={formData.password} onChange={handleChange} />
                 </div>
-                <button type="submit" onClick={handlelogin}>Login </button>
+                <button type="submit" onClick={handleLogin} className="login-button">Login</button>
             </form>
         </div>
-  )
+    );
 }
 
 export default Login
