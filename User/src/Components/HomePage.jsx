@@ -119,6 +119,7 @@ function HomePage() {
   const [editIndex, setEditIndex] = useState(null);
 
   const handleInputChange = (e) => {
+    kdjfks
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
